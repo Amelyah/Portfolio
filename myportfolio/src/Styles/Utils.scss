@@ -1,0 +1,22 @@
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.text-red {
+    color: red;
+}
+$colors: blue, yellow, red, green, grey, purple, black, white;
+
+@each $color in $colors {
+  .text-#{$color} {
+   color: $color;
+  }
+}
+
+
+
+
+
+
+
+

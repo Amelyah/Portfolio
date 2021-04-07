@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poller+One&family=Rasa:wght@300&family=Rock+Salt&display=swap');
+
+
+.third-block {
+    height: auto;
+    background-color: rgba(46,46,53,255);
+    margin-top: 140px;
+    margin-bottom: 140px;
+
+    .rdvButton {
+        font-family: 'Rasa';
+        font-weight: bold;
+        font-size: 18px;
+        background-color: rgba(46,46,53,255);
+        color: #e0a94a;
+        border: 3px solid #e0a94a;
+        margin-top: 60px;
+        width: auto;
+        height: 60px;
+        transition-duration: .5s;
+
+        &:hover,&:focus,&:active {
+            background-color: #e0a94a;
+            color:rgb(44,44,52);
+        }
+    }
+
+    .text-contact {
+        text-align: center;
+
+        /*p {
+            color: white;
+            font-size: 20px;
+        }*/
+    }
+
+    .contactContainer {
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+
+        .contactBox {
+            background-color:#36363e;
+            display: flex;
+            padding: 15px 0;  
+            margin-bottom: 10px;
+
+            svg {
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: auto;
+                margin-bottom: auto;
+                fill: white;
+            }
+            
+            p {
+                color: #e0a94a;
+                margin: auto 0 auto 0;
+                font-size: 14px;
+              
+            }
+
+            a {
+                font-size: 14px;
+            }
+
+            
+        }
+
+        a {
+            color: #e0a94a;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            position: relative;
+            text-decoration: none;
+            font-weight: normal;
+        }
+    
+        a:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #e0a94a;
+            transition: width 350ms ease;
+        }
+    
+        a:hover:after {
+            width: 100%;
+        }
+
+    }
+    
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// Ex : col-2
+@media (max-width: 575.98px) { 
+
+    .third-block {
+        .contactContainer {
+            .contactBox {
+                &:nth-child(1){
+                    p{
+                        font-size: 12px;
+                    }
+                }
+
+                p {
+                    font-size: 13px;
+                }
+    
+                a {
+                    font-size: 13px;
+                }
+    
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+// Ex : col-sm-2
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+}
+
+// Medium devices (tablets, 768px and up)
+// Ex : col-md-2
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+}
+
+// Large devices (desktops, 992px and up)
+// Ex : col-lg-2
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+// Ex : col-xl-2
+@media (min-width: 1200px) { 
+
+}

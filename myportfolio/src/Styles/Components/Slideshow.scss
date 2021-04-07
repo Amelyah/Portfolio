@@ -1,0 +1,120 @@
+
+.slide-container {
+    width: 85%;
+    margin: auto; 
+
+    .each-slide {
+        width: 75%;
+        margin: auto;
+    
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .each-slide > div {
+        background-size: cover;
+        height: auto;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .each-slide span {
+        padding: 20px;
+        font-size: 20px;
+        background: none;
+        text-align:center;
+        height: 25%;
+        margin-top: auto;
+        color: #e0a94a;
+    }
+
+    button {
+        background-color: transparent;
+        width: auto;
+        
+
+        svg {
+            padding: 10px;
+            fill: #e0a94a;
+            width: 45px;
+            height: 45px;
+
+            path {
+                stroke-width: 5%;
+            }
+
+            &:hover {
+                fill: rgba(46,46,53,255);
+                background-color: #e0a94a;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// Ex : col-2
+@media (max-width: 575.98px) { 
+    .slide-container{
+        .each-slide{
+            position: relative;
+            width: 80%;
+            height: 270px;
+
+            #imgBeaute {
+                height:190px;
+                width:160px;
+            }
+
+            #imgMode {
+                height:190px;
+                width:160px;
+            }
+        }
+
+        .each-slide span {
+            font-size: 14px;
+            text-align: left;
+            position: absolute;
+            margin-left: 0;
+            bottom: 20px;
+            width: 100%;
+        }
+        .react-rotating-text-cursor{
+            margin-left: -19px;
+            display: none;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+// Ex : col-sm-2
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+}
+
+// Medium devices (tablets, 768px and up)
+// Ex : col-md-2
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+}
+
+// Large devices (desktops, 992px and up)
+// Ex : col-lg-2
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+// Ex : col-xl-2
+@media (min-width: 1200px) { 
+
+}
+
+
+
+

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poller+One&family=Rasa:wght@300&family=Rock+Salt&display=swap');
+
+
+.nav-scroll-color {
+    background-color :rgba(224, 169, 74, 0.7);
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+    padding-left: 50px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    height: 60px;
+
+    // balises
+    a {
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        position: relative;
+        text-decoration: none;
+        padding: 0;
+        margin-left: 45px;
+    }
+    
+    .nav-link {
+        margin-left: 20px;
+        padding-left: 0;
+        font-family: 'Rasa';
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #e0a94a;
+        transition: width 350ms ease;
+    }
+
+    a:hover:after {
+        width: 100%;
+    }
+
+    hr {
+        background-color: grey;
+        height: 1px;
+        width: 26px;
+        transform: rotate(90deg);
+        margin-top: auto;
+        margin-bottom: auto; 
+    }
+
+    .svg-navbar{
+        margin-left: 10px;
+    }
+
+    svg {
+        color: white;
+        margin-top: auto;
+        margin-bottom: auto; 
+    }
+
+    .point-carre {
+        margin-top: 25px;
+        font-size: 20px;
+        color: #e0a94a;
+    }
+
+    .navbar-brand {
+        color: white;
+        font-size: 40px;
+        font-family: "Poller One";
+        font-weight: 400;
+        padding: 0;
+        margin-top: 0px;
+        height: 60px;
+    }
+
+    .navbar-toggler {
+        .toggler-icon {
+            background-color: #e0a94a;
+            width: 25px;
+            height: 2px;
+            border-radius: 5px;
+            margin-bottom: 4px;
+            &:nth-child(2){
+                background-color: green;
+            }
+            &:nth-child(3){
+                background-color: rgb(68, 30, 8);
+            }
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+// Ex : col-2
+@media (max-width: 767.98px) { 
+
+    .navbar {
+        height: auto;
+        text-align: center;
+        padding-top: 15px;
+
+        .navbar-brand {
+            margin-left: 15px;
+        }
+        
+        ul {
+            padding-bottom: 10px;
+        }
+        
+        hr {
+            display: none;
+        }
+
+    }
+}

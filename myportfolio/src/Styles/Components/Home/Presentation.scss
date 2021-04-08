@@ -23,16 +23,15 @@
 // CSS
 
 .first-block {
-    height: auto;
-    padding-bottom: 100px;
-
+    height: 100vh;
+    
     .presentation-block {
-        padding-top: 60px;
+        padding-top: 140px;
         justify-content: center;
 
         .ppp {
             padding: 0 auto 0 auto;
-            margin-bottom: 60px;
+            //margin-bottom: 60px;
 
             h1{
                 color: white;
@@ -67,20 +66,33 @@
         }
 
         .photoHome {
-            
+            //height: 100%;
             #cercle {
                 margin-left: auto;
                 margin-right: auto; 
                 width: 300px;
                 height: 300px;
-                border-radius: 280px;
+                border-radius: 50%;
                 background: rgb(44,44,52);
+
+                .imagePresentation {
+                    margin-top: 5px;
+                    height: 500px;
+                    margin-left: -40px;              
+                }
             } 
         }
 
         .introductionHome {
             padding: 0;
             
+            .goal {
+                h3 {
+                    font-size: 32px;
+                }
+            }
+            
+
             .more {
                 position: relative;
                 text-decoration: none;
@@ -158,57 +170,44 @@
     }
 }
 
-// Extra small devices (portrait phones, less than 576px)
-// Ex : col-2
-@media (max-width: 575.98px) { 
+// Extra large devices (large desktops, 1200px and up)
+// Ex : col-xl-2
+@media (max-width: 1200px) { 
     .first-block {
-    
-        .presentation-block {
-    
-            .ppp {
-                h1{
-                    font-size: 32px;
-                    
-                    .point-carre {
-                        font-size: 14px;
-                    }
-                }
-            }
+        height: auto;
 
-            .introductionHome {
-                .goal {
-                    p {
-                        font-size: 14px;
-                    }
-                }
-            }
-    
-            .contactButton {
-                font-size: 14px;
-                border: 2px solid #e0a94a;
-                margin-top: 40px;
-                width: 150px;
-                height: 50px;
+        .presentation-block {
+            .introductionHome{
+                margin-top: 100px;
+                margin-bottom: 60px;
             }
         }
     }
 }
 
-// Small devices
-@media (min-width: 576px) and (max-width: 767.98px) { 
+
+// Large devices (desktops, 992px and up)
+// Ex : col-lg-2
+@media (min-width: 992px) and (max-width: 1199.98px) { 
     .first-block {
+        height: auto;
+
         .presentation-block {
             .photoHome { 
                 #cercle {
+                    width: 250px;
+                    height: 250px;
+
                     .imagePresentation {
-                        //height: 350px;
-                        
+                        height: 420px;
+                        margin-left: -30px;
                     }
                 } 
             }
         }
     }
 }
+
 
 // Medium devices (tablets, 768px and up)
 // Ex : col-md-2
@@ -230,39 +229,64 @@
     }
 }
 
-// Large devices (desktops, 992px and up)
-// Ex : col-lg-2
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+// Small devices
+@media (min-width: 576px) and (max-width: 767.98px) { 
     .first-block {
         .presentation-block {
             .photoHome { 
+                margin-top: 50px;
+                
                 #cercle {
-                    width: 250px;
-                    height: 250px;
-
                     .imagePresentation {
-                        height: 420px;
-                        margin-left: -30px;
+                        //height: 350px;
+                        
                     }
                 } 
+            }
+            .introductionHome{
+                margin-top: 50px;
+                margin-bottom: 60px;
             }
         }
     }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-// Ex : col-xl-2
-@media (min-width: 1200px) { 
+// Extra small devices (portrait phones, less than 576px)
+// Ex : col-2
+@media (max-width: 575.98px) { 
     .first-block {
+    
         .presentation-block {
             .photoHome { 
-                #cercle {
-                    .imagePresentation {
-                        height: 500px;
-                        margin-top: 30px;
-                        margin-left: -40px;
+                margin-top: 50px;
+            }
+
+            .ppp {
+                h1{
+                    font-size: 32px;
+                    
+                    .point-carre {
+                        font-size: 14px;
                     }
-                } 
+                }
+            }
+
+            .introductionHome {
+                margin-top: 50px;
+                .goal {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+    
+            .contactButton {
+                font-size: 14px;
+                border: 2px solid #e0a94a;
+                margin-top: 40px;
+                width: 150px;
+                height: 50px;
             }
         }
     }

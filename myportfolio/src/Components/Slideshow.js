@@ -41,42 +41,42 @@ export default function Slideshow() {
 
 
     return (
-
+//height="370" width="320" 
         <div className="slide-container">
             <Slide {...properties}>
                 <div className="each-slide">
                     <div>
-                        <img id="imgBeaute" height="370" width="320" src={tabIllustrations[0]} />
+                        <img id="imgBeaute" height="35%" width="35%" src={tabIllustrations[0]} />
                         <span><ReactRotatingText items={[beaute]} /></span>
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img height="100%" width="100%" src={tabIllustrations[1]} />
+                        <img height="50%" width="50%" src={tabIllustrations[1]} />
                         <span><ReactRotatingText items={[creationWeb]} /></span>
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img height="100%" width="100%" src={tabIllustrations[2]} />
+                        <img height="50%" width="50%" src={tabIllustrations[2]} />
                         <span><ReactRotatingText items={[medecine]} /></span>
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img height="100%" width="100%" src={tabIllustrations[3]} />
+                        <img height="50%" width="50%" src={tabIllustrations[3]} />
                         <span><ReactRotatingText items={[voyage]} /></span>
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img id="imgMode" height="370" width="320" src={tabIllustrations[4]} />
+                        <img id="imgMode" height="35%" width="35%" src={tabIllustrations[4]} />
                         <span><ReactRotatingText items={[mode]} /></span>
                     </div>
                 </div>
                 <div className="each-slide">
                     <div>
-                        <img height="100%" width="100%" src={tabIllustrations[5]} />
+                        <img height="50%" width="50%" src={tabIllustrations[5]} />
                         <span><ReactRotatingText items={[cuisine]} /></span>
                     </div>
                 </div>

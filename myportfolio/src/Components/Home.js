@@ -11,6 +11,7 @@ import { render } from '@testing-library/react'
 // COMPOSANTS
 import Header from './Header'
 import Slideshow from './Slideshow'
+import FlipCard from './FlipCard'
 // MEDIAS
 import CV from '../Medias/CV_BENLEMOUY-Amelia.pdf'
 import CV_Miniature from '../Medias/CV_BENLEMOUY-Amelia_Miniature.jpg'
@@ -89,6 +90,12 @@ export default function Home() {
         element.classList.add("activ") 
     }
 
+    // Fonction
+    const returnHTML = () => {
+        return 
+    }
+
+
     // Partie de code pour les cartes réversibles
     CSSPlugin.defaultTransformPerspective = 1000;
 
@@ -122,7 +129,7 @@ export default function Home() {
 
     return (
 
-        <div className="homeComponent container-fluid">
+        <div className="homeComponent">
 
             {/************************* 1ère SECTION : PRESENTATION *************************/}
 
@@ -143,12 +150,10 @@ export default function Home() {
                         <button className="contactButton" onClick={contactMe}>CONTACTEZ-MOI</button>
                     </div> 
 
-                    <div className="col-10 col-md-5 col-xl-4">
-                        <div className="photoHome">
+                    <div className="photoHome col-10 col-md-5 col-xl-4">
                             <div id="cercle">
-                                <img className="imagePresentation" src={Presentation_Image} alt="Image presentation" title="presentationImage" />
+                                <img className="imagePresentation" src={Presentation_Image} alt="Image presentation" title="Hello!" />
                             </div>
-                        </div>
                     </div>
 
                     <div className="col-8 col-md-6 col-xl-4 introductionHome">
@@ -169,7 +174,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <div id="hauteurPresentation"></div>
+               {/* <div id="hauteurPresentation"></div> */}
             </div>
         
 
@@ -222,92 +227,68 @@ export default function Home() {
 
                             <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div className="row justify-content-center tab-pane-master">
-                                    <p>Le Master I2A est un master général au cours duquel j'ai pu abordé plusieurs notions.</p>
+                                    <p>Le Master I2A est un master général au cours duquel j'ai pu abordé plusieurs notions 
+                                        <br />visibles en cliquant sur les différentes cases.</p>
                                     <p className="i2A">I2A : Informatique Avancée et Applications</p>
                                 
-                                    <div id="mainWrap" className="row justify-content-center col-12 col-sm-11 col-md-12">
-                                        <div className="cardCont">
-                                            <div className="cardBack">
-                                                <ul>
-                                                    <li>PHP / MySQL</li>
-                                                    <li>HTML / CSS</li>
-                                                    <li>Base de données : mariadb, mongodb, elasticsearch, cassandra</li>
-                                                </ul>
-                                            </div>
-                                            <div className="cardFront">
-                                                <p>Développement Web</p>
-                                            </div>
-                                        </div>
-                                        <div className="cardCont">
-                                            <div className="cardBack">
-                                                <ul>
-                                                    <li>Techniques de gestion de projet : méthodes agiles</li>
-                                                    <li>Validation et preuve pour un modèle : notation B</li>
-                                                </ul>
-                                            </div>
-                                            <div className="cardFront">
-                                                <p>Génie Logiciel</p>
-                                            </div>
-                                        </div>
-                                        <div className="cardCont">
-                                            <div className="cardBack">
-                                                <ul>
-                                                    <li>Java : hérédité, polymorphisme, Design Patterns, Swing, algorithmique concurrente, communication dans les systèmes distribués : RMI, JMS, REST, SOAP...</li>
-                                                    <li>Langage Scheme</li>
-                                                </ul>
-                                            </div>
-                                            <div className="cardFront">
-                                                <p>Programmation</p>
-                                            </div>
-                                        </div>
-                                        <div className="cardCont">
-                                            <div className="cardBack">
-                                                <ul>
-                                                    <li>Langage des contraintes OCL</li>
-                                                    <li>Modélisation UML - Méta-modélisation</li>
-                                                    <li>Langage de transformations : ATL </li>
-                                                    <li>Cyber-sécurité</li>
-                                                    <li>Vulnérabilités : par injection SQL/XSS, de type CRSF/authentification</li>
-                                                    <li>Outils/méthodes de détection de vulnérabilités d'applications Web</li>
-                                                </ul>
-                                            </div>
-                                            <div className="cardFront">
-                                                <p>Ingénierie Dirigée par les Modèles et Sécurité</p>
-                                            </div>
-                                        </div>
-                                        <div className="cardCont">
-                                            <div className="cardBack">
-                                                <ul>
-                                                    <li>Concepts du système d'exploitation UNIX</li>
-                                                    <li>Administration système</li>
-                                                    <li>Environnement de travail - Commandes</li>
-                                                    <li>Gestion de la sécurité</li>
-                                                    <li>Adressage - Protocole - Gestion</li>
-                                                </ul>
-                                            </div>
-                                            <div className="cardFront">
-                                                <p>Réseau</p>
-                                            </div>
-                                        </div>
-                                        <div className="cardCont">
-                                            <div className="cardBack">
-                                                <ul>
-                                                    <li>Automates</li>
-                                                    <li>Graphes</li>
-                                                    <li>Algorithmique</li>
-                                                    <li>Programmation : linéaire, dynamique, gloutonne</li>
-                                                    <li>Machine de Turing</li>
-                                                    <li>Intelligence artificielle</li>
-                                                    <li>Méthodes formelles</li>
-                                                    <li>Spécification, vérification et test</li>
-                                                    <li>Informatique graphique : OpenGL</li>
-                                                </ul>
-                                            </div>
-                                            <div className="cardFront">
-                                                <p>Outils Mathématiques</p>
-                                            </div>
-                                        </div>
-                                    </div> 
+                                    <div className="row justify-content-center">
+                                        <FlipCard frontContent="Développement Web" backContent={
+                                            <ul>
+                                                <li>PHP / MySQL</li>
+                                                <li>HTML / CSS</li>
+                                                <li>Base de données : mariadb, mongodb, elasticsearch, cassandra</li>
+                                            </ul>}
+                                        />
+
+                                        <FlipCard frontContent="Génie Logiciel" backContent={
+                                            <ul>
+                                                <li>Techniques de gestion de projet : méthodes agiles</li>
+                                                <li>Validation et preuve pour un modèle : notation B</li>
+                                            </ul>}
+                                        />
+
+                                        <FlipCard frontContent="Programmation" backContent={
+                                            <ul>
+                                                <li>Java : hérédité, polymorphisme, Design Patterns, Swing, algorithmique concurrente, communication dans les systèmes distribués : RMI, JMS, REST, SOAP...</li>
+                                                <li>Langage Scheme</li>
+                                            </ul>}
+                                        />
+
+                                        <FlipCard frontContent="Ingénierie Dirigée par les Modèles et Sécurité" backContent={
+                                            <ul>
+                                                <li>Langage des contraintes OCL</li>
+                                                <li>Modélisation UML - Méta-modélisation</li>
+                                                <li>Langage de transformations : ATL </li>
+                                                <li>Cyber-sécurité</li>
+                                                <li>Vulnérabilités : par injection SQL/XSS, de type CRSF/authentification</li>
+                                                <li>Outils/méthodes de détection de vulnérabilités d'applications Web</li>
+                                            </ul>}
+                                        />
+
+                                        <FlipCard frontContent="Réseau" backContent={
+                                            <ul>
+                                                <li>Concepts du système d'exploitation UNIX</li>
+                                                <li>Administration système</li>
+                                                <li>Environnement de travail - Commandes</li>
+                                                <li>Gestion de la sécurité</li>
+                                                <li>Adressage - Protocole - Gestion</li>
+                                            </ul>}
+                                        />
+
+                                        <FlipCard frontContent="Outils Mathématiques" backContent={
+                                            <ul>
+                                                <li>Automates</li>
+                                                <li>Graphes</li>
+                                                <li>Algorithmique</li>
+                                                <li>Programmation : linéaire, dynamique, gloutonne</li>
+                                                <li>Machine de Turing</li>
+                                                <li>Intelligence artificielle</li>
+                                                <li>Méthodes formelles</li>
+                                                <li>Spécification, vérification et test</li>
+                                                <li>Informatique graphique : OpenGL</li>
+                                            </ul>}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         

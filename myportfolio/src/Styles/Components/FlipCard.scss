@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poller+One&family=Rasa:wght@300&family=Rock+Salt&display=swap');
+
+
+.card {
+    background-color: unset;
+    border: none;
+    padding: 0;
+    height: 300px;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    .front-card {
+        background-color: rgba(46,46,53,255);
+        height: 300px;
+        width: 300px;
+        display: table-cell;
+        vertical-align: middle;
+        
+
+        h4 {
+            color: #e0a94a;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            font-family: 'Rasa';
+            font-weight: 300;
+            font-size: 20px;
+        }
+    }
+
+    .back-card {
+        background-color: #e0a94a;
+        height: 300px;
+        width: 300px;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px 10px 10px 0;
+        
+        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.5),
+            -1px 2px 20px rgba(255, 255, 255, 0.5) inset; 
+
+    }
+}

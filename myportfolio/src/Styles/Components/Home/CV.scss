@@ -7,7 +7,6 @@
     padding-top: 140px;
     padding-bottom: 100px;
 
-
     .section-portfolio {
         text-align: center;
 
@@ -77,84 +76,6 @@
                         font-family: 'Rasa';
                         font-weight: 300;
                         font-size: 20px;
-                    }
-                    
-                    #mainWrap {
-                        margin-right: auto;
-                        margin-left: auto;
-                        padding-top: 30px;
-                        
-                        .cardCont {
-                            width:250px;
-                            height:250px;
-                            margin-right:20px;
-                            position:relative;
-                            margin-bottom: 20px;
-
-                            .cardFront {
-                                background-color: rgba(46,46,53,255);
-                            }
-
-                            .cardBack {
-                                background-color: #e0a94a;
-                                padding-left: 15px;
-                                padding-right: 10px;
-                                
-                                ul {
-                                    padding: 0;
-                                    
-                                    li {
-                                        list-style-type: none;
-                                    }
-
-                                    li:before{
-                                        content: "";
-                                        border: 2px solid rgba(46,46,53,255);
-                                        display: inline-block;
-                                        height: 7px;
-                                        width: 7px;
-                                        vertical-align: middle;
-                                        transform:rotate(45deg);
-                                        margin-right: 5px;
-                                    }
-                                }
-                            }
-
-                            .cardFront, .cardBack {
-                                position:absolute;
-                                width:250px;
-                                height:250px;
-                                backface-visibility: hidden;
-                                -webkit-backface-visibility: hidden;
-                                -moz-backface-visibility: hidden;
-                                -ms-backface-visibility: hidden;
-                                display: flex; /* contexte sur le parent */
-                                flex-direction: column; /* direction d'affichage verticale */
-                                justify-content: center;
-    
-                                p {
-                                    color:#e0a94a;
-                                    font-size: 20px;
-                                    font-weight: bold;
-                                    margin-left: auto;
-                                    margin-right: auto;
-                                }
-    
-                                ul {
-                                    li {
-                                        font-size: 14px;
-                                    }
-                                }
-                            }
-                        }
-
-                        .playcardFront {
-                            background:url("http://unlimitedpotentialnow.com/wp-content/uploads/2012/01/Bouquet-cs.jpg");
-                        }
-                    
-                        .playcardBack {  
-                            background:url("http://i203.photobucket.com/albums/aa158/Comic1111/ACe.png");
-                        }
                     }
                 }
 
@@ -235,8 +156,6 @@
         
                 .nav{
                     justify-content: center;
-                    
-                    
                 }
         
                 .nav-item {

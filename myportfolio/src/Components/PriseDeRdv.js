@@ -1,8 +1,13 @@
 // OUTILS
-import React from 'react'
+import React, { useEffect } from 'react'
 import { InlineWidget } from "react-calendly"
 
 export default function PriseDeRdv() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    
     return (
         <div className="calendly">
             <div className="row justify-content-center">

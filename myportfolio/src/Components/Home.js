@@ -56,15 +56,6 @@ export default function Home() {
     const getAboutMe = () => {
         refAboutMe.current.scrollIntoView()
         window.scrollBy(0, -90);
-
-
-
-        /*var hauteurIdPortfolio = document.getElementById("portfolio").scrollHeight;
-        //console.log(hauteurP)
-        window.scrollTo({
-            top: 1400,
-            behavior: 'smooth',
-        });*/
     }
 
     // Fonction permettant de remonter en haut de la page
@@ -89,42 +80,7 @@ export default function Home() {
 
         element.classList.add("activ") 
     }
-
-    // Fonction
-    const returnHTML = () => {
-        return 
-    }
-
-
-    // Partie de code pour les cartes réversibles
-    CSSPlugin.defaultTransformPerspective = 1000;
-
-    TweenMax.set($(".cardBack"), {rotationY:-180});  //we set the backface 
     
-    $.each($(".cardCont"), function(i,element) {
-        var frontCard = $(this).children(".cardFront"),
-        backCard = $(this).children(".cardBack"),
-        tl = new TimelineMax({paused:true});
-
-        tl
-        .to(frontCard, 1, {rotationY:180})
-        .to(backCard, 1, {rotationY:0},0)
-        .to(element, .5, {z:50},0)
-        .to(element, .5, {z:0},.5);
-
-        element.animation = tl;
-    });
-
-    $(".cardCont").hover(elOver, elOut);
-
-    function elOver() {
-        this.animation.play();
-    }
-    
-    function elOut() {
-        this.animation.reverse();
-    }
-
 
 
     return (
@@ -181,7 +137,7 @@ export default function Home() {
 
             {/************************* 2ème SECTION : CV *************************/}
 
-            <div className="second-block justify-content-center">
+            <div id="portfolio" className="second-block justify-content-center">
 
                 <div className="row ">
                     <div className="section-portfolio col-xl-12">

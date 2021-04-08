@@ -1,32 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useHistory } from "react-router-dom"
 import { TimelineMax } from 'gsap'
 
 export default function Header() {
-
-    /*let location = useLocation();
-
-    C'est pour faire une condition dans ton html 
-    {(() => {
-        if (location.pathname.match(/priseDe/)) {
-            return  <li className="nav-item">
-            <a className="nav-link" href="/#portfolio">Portfolio</a>
-        </li>;
-        } else {
-            return  <li className="nav-item">
-            <a className="nav-link" href="/#portfolio">Portfolio</a>
-        </li>;
-        }
-    })()}*/
-
-    //var myNav = document.getElementById("changeScrollHeader");
-    //const scrollHeader = () => {
-    //const myNav = useRef();
-    //myNav.classList.add(".nav-scroll-color");
-    //myNav.classList.remove(".nav-scroll-color");
-    //className={`navbar navbar-expand-md ${isScroll ? "nav-scroll-color" : ""}`}
-
-    
     const [isScroll, setIsScroll] = useState(false)
 
     window.onscroll = () => {
@@ -61,9 +38,18 @@ export default function Header() {
     }
 
 
+    useEffect(() => {
+        
+            if(window.location.hash === "#contactMe"){
+                window.location.href='/#contactMe'
+            }else if(window.location.hash === "#portfolio"){
+                window.location.href='/#portfolio'
+            }
+    }, [])
+
+
     return (
         <div>
-            {/* ref={myNav} */}
             <nav id="changeScrollHeader" className="navbar navbar-expand-md">
                 <a className="navbar-brand d-flex" href="/">AB
                     <p className="point-carre">■</p>

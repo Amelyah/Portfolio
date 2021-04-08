@@ -1,5 +1,5 @@
 // OUTILS
-import React, {useState, Component} from 'react'
+import React, {useState, useEffect, Component} from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 // STYLES
 import './Styles/App.scss'
@@ -12,51 +12,56 @@ import PriseDeRdv from './Components/PriseDeRdv'
 
 
 
-//function App() {
-class App extends Component {
+export default function App() {
+//class App extends Component {
+  
+  const [isLoading, setIsLoading] = useState(true)
 
-  constructor() {
-    super()
-    this.state = {
-      loading: true
-    }
-  }
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     loading: true
+  //   }
+  // }
 
-  componentWillMount() {
+  // componentWillMount() {
+  //   setTimeout(() => {
+  //     this.setState({
+  //       loading: false
+  //     })
+  //   }, 5000);
+  // }
+  useEffect(() => {
+
     setTimeout(() => {
-      this.setState({
-        loading: false
-      })
-    }, 5000);
-  }
+      setIsLoading(false)
+    }, 3000);
 
- 
+  }, [])
 
-
-  render(){
+  //render(){
     return (
       <div className="App">
 
         <Router>
-          
           <Switch>
-            {this.state.loading ? <Loader /> : null}
+            {isLoading ? <Loader /> : null}
+
             <Route exact path="/">
-              <Header />
+            <Header />
               <Home />
               <Footer />
             </Route>
+
             <Route path="/priseDeRdv">
               <Header />
               <PriseDeRdv />
               <Footer />
             </Route>
+
           </Switch>
         </Router>
 
       </div>
     );
   }
-}
-
-export default App;

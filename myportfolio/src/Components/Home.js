@@ -38,10 +38,11 @@ export default function Home() {
     // FONCTIONS 
     // Fonction permettant de rediriger l'utilisateur à la section Contact ou un formulaire de contact
     const contactMe = () => {
-        window.scrollTo({
-            top: 10000,
-            behavior: 'smooth',
-        });
+        // window.scrollTo({
+        //     top: 10000,
+        //     behavior: 'smooth',
+        // });
+        window.location.href='/#contactMe'
     }
     
     // Fonction permettant de rediriger l'utilisateur vers la prise de RDV automatique via Calendly
@@ -80,7 +81,7 @@ export default function Home() {
 
         element.classList.add("activ") 
     }
-    
+
 
 
     return (
@@ -130,7 +131,6 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-               {/* <div id="hauteurPresentation"></div> */}
             </div>
         
 
@@ -184,7 +184,7 @@ export default function Home() {
                             <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div className="row justify-content-center tab-pane-master">
                                     <p>Le Master I2A est un master général au cours duquel j'ai pu abordé plusieurs notions 
-                                        <br />visibles en cliquant sur les différentes cases.</p>
+                                        visibles en cliquant sur les différentes cases.</p>
                                     <p className="i2A">I2A : Informatique Avancée et Applications</p>
                                 
                                     <div className="row justify-content-center">

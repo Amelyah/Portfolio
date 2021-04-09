@@ -1,20 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useHistory } from "react-router-dom"
-import { TimelineMax } from 'gsap'
 
 export default function Header() {
-    const [isScroll, setIsScroll] = useState(false)
 
-    window.onscroll = () => {
-        if(window.scrollY > 50){
-            setIsScroll(true)
-        }else{
-            setIsScroll(false)
-        }
-    }
-
+    // Change color of the background on scroll
     const [isToggle, setIsToggle] = useState(false)
+    const [isNavbar, setNavbar] = useState(false);
 
     const toggle = () => {
         if(isToggle){
@@ -24,33 +16,28 @@ export default function Header() {
         }
     }
 
-    const tl = new TimelineMax
-
-    if(isScroll && !isToggle){
-        tl.to('.navbar', 1, {backgroundColor:"rgba(224, 169, 74, 0.7)"})
-    }else if(isScroll && isToggle){
-        tl.to('.navbar', 1, {backgroundColor:"rgba(224, 169, 74, 0.7)"})
-    }else if(!isScroll && isToggle){
-        tl.to('.navbar', 1, {backgroundColor:"rgba(224, 169, 74, 0.7)"})
-    }else{
-        tl.to('.nav-scroll-color', 1, {backgroundColor:"transparent"})
-        tl.to('.navbar', 1, {backgroundColor:"transparent"})
+    const changeBackground = () => {
+        if(window.scrollY > 50){
+            setNavbar(true)
+        }else setNavbar(false)
     }
 
+    window.addEventListener('scroll', changeBackground)
 
+
+    // Redirections
     useEffect(() => {
-        
-            if(window.location.hash === "#contactMe"){
-                window.location.href='/#contactMe'
-            }else if(window.location.hash === "#portfolio"){
-                window.location.href='/#portfolio'
-            }
+        if(window.location.hash === "#contactMe"){
+            window.location.href='/#contactMe'
+        }else if(window.location.hash === "#portfolio"){
+            window.location.href='/#portfolio'
+        }
     }, [])
 
 
     return (
-        <div>
-            <nav id="changeScrollHeader" className="navbar navbar-expand-md">
+        <div> 
+            <nav id="changeScrollHeader" className={(isNavbar || isToggle) ? 'navbar navbar-expand-md nav-scroll-color' : 'navbar navbar-expand-md'} >
                 <a className="navbar-brand d-flex" href="/">AB
                     <p className="point-carre">■</p>
                 </a>

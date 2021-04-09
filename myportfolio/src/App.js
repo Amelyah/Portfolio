@@ -13,24 +13,9 @@ import PriseDeRdv from './Components/PriseDeRdv'
 
 
 export default function App() {
-//class App extends Component {
   
   const [isLoading, setIsLoading] = useState(true)
 
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     loading: true
-  //   }
-  // }
-
-  // componentWillMount() {
-  //   setTimeout(() => {
-  //     this.setState({
-  //       loading: false
-  //     })
-  //   }, 5000);
-  // }
   useEffect(() => {
 
     setTimeout(() => {
@@ -39,29 +24,29 @@ export default function App() {
 
   }, [])
 
-  //render(){
-    return (
-      <div className="App">
 
-        <Router>
-          <Switch>
-            {isLoading ? <Loader /> : null}
+  return (
+    <div className="App">
 
-            <Route exact path="/">
+      <Router>
+        <Switch>
+          {isLoading ? <Loader /> : null}
+
+          <Route exact path="/">
+          <Header />
+            <Home />
+            <Footer />
+          </Route>
+
+          <Route path="/priseDeRdv">
             <Header />
-              <Home />
-              <Footer />
-            </Route>
+            <PriseDeRdv />
+            <Footer />
+          </Route>
 
-            <Route path="/priseDeRdv">
-              <Header />
-              <PriseDeRdv />
-              <Footer />
-            </Route>
+        </Switch>
+      </Router>
 
-          </Switch>
-        </Router>
-
-      </div>
+    </div>
     );
   }

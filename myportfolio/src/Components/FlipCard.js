@@ -6,7 +6,6 @@ export default function FlipCard(props) {
     const [isFlipped, setFlipped] = useState(false)
 
     const handleClick = () => {
-        //e.preventDefault();
         setFlipped(!isFlipped);
     }
 

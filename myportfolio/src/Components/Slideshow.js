@@ -12,15 +12,9 @@ import Voyage from '../Medias/voyager.png'
 import Writer from './TypeWriter'
 
 
-
-
-
-
-
 export default function Slideshow() {
 
     var ReactRotatingText = require('react-rotating-text');
-
     const tabIllustrations = [Beaute, Website, Medecine, Voyage, Mode, Cuisine];
 
     const properties = {
@@ -41,7 +35,6 @@ export default function Slideshow() {
 
 
     return (
-//height="370" width="320" 
         <div className="slide-container">
             <Slide {...properties}>
                 <div className="each-slide">
